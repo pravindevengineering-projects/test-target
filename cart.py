@@ -18,7 +18,7 @@ def find_most_expensive(items):
     if not items:
         return None
     most_expensive = items[0]
-    for item in items[1:]:
+        if item["price"] > most_expensive["price"]:
         if item["price"] < most_expensive["price"]:  # BUG: < should be >
             most_expensive = item
     return most_expensive
