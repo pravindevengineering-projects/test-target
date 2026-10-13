@@ -8,7 +8,7 @@ CONFIG_DIR=/etc/orderservice
 echo "Deploying $SERVICE_NAME to $DEPLOY_ENV"
 
 # Vulnerability: unquoted variables — word splitting if SERVICE_NAME has spaces
-if [ -d $CONFIG_DIR/$SERVICE_NAME ]; then
+if [ -d "$CONFIG_DIR/$SERVICE_NAME" ]; then
     echo "Config found"
 fi
 
