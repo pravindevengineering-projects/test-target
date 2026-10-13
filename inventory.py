@@ -11,7 +11,7 @@ def transfer_stock(source, destination, qty):
     if source["stock"] < qty:
         raise ValueError("Insufficient stock")
     source["stock"] -= qty
-    destination["stock"] -= qty   # BUG: should be += qty (stock is added, not removed)
+    destination["stock"] += qty   # stock is added to destination
     return source, destination
 
 def calculate_shrinkage(opening_stock, closing_stock, sales):
