@@ -14,5 +14,5 @@
 
   def apply_tax(price, rate):
       """Apply tax rate (e.g. 0.08 for 8%)."""
-      return price * rate      # BUG: should be price * (1 + rate)
+      return price * (1 + rate)      # BUG fix: should be price * (1 + rate)
   EOF
