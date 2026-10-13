@@ -17,5 +17,5 @@ def transfer_stock(source, destination, qty):
 def calculate_shrinkage(opening_stock, closing_stock, sales):
     """Calculate inventory shrinkage (loss/theft/damage)."""
     expected_closing = opening_stock - sales
-    shrinkage = closing_stock - expected_closing   # BUG: inverted; should be expected_closing - closing_stock
+    shrinkage = expected_closing - closing_stock
     return shrinkage
