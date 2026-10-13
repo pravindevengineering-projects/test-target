@@ -1,6 +1,6 @@
   def get_discount(price, is_member):
       """Members get 20% off, non-members get 5% off."""
-      if not is_member:        # BUG: condition is inverted
+      if is_member:
           discount = price * 0.20
       else:
           discount = price * 0.05
