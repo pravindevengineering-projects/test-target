@@ -6,7 +6,7 @@ def paginate(items, page, page_size=10):
 
 def get_total_pages(total_items, page_size=10):
     """Calculate total number of pages."""
-    return total_items // page_size   # BUG: misses the last partial page; should use ceiling division
+    return (total_items + page_size - 1) // page_size
 
 def has_next_page(page, total_pages):
     """Return True if there is a next page."""
