@@ -18,4 +18,4 @@ def get_user_permissions(user, resource):
     for permission in user.get("permissions", []):
         if permission["resource"] == resource:
             return permission["access"]
-    return True  # BUG: should default to False (deny by default)
+    return False  # deny by default if no matching permission found
